@@ -1,19 +1,32 @@
 const images = () => {
     const imgPopup = document.createElement('div'),
           workSection = document.querySelector('.works'),
-          bigImage = document.createElement('img')
+          bigImage = document.createElement('img'),          
+          bigImageWrap = document.createElement('div')
 
-    imgPopup.classList.add('popup')
-    workSection.appendChild(imgPopup)
-
+    imgPopup.classList.add('popup')   
+    
     imgPopup.style.justifyContent = 'center'
     imgPopup.style.alignItems = 'center'
     imgPopup.style.display = 'none'
-   
-    bigImage.style.maxWidth = '60%'
-    
-    imgPopup.appendChild(bigImage)
 
+   bigImageWrap.style.flex = '0 0 33.33%'
+   bigImageWrap.style.overflow = 'hidden'
+   bigImageWrap.style.position = 'relative'
+   bigImageWrap.style.width = '70%'
+   bigImageWrap.style.minHeight = '80%'
+   
+   bigImage.style.width = '100%'
+   bigImage.style.height = '100%'
+   bigImage.style.objectFit = 'cover'
+   bigImage.style.position = 'absolute'
+   bigImage.style.top = '0'
+   bigImage.style.left = '0'
+
+    workSection.appendChild(imgPopup)
+    imgPopup.appendChild(bigImageWrap)
+    bigImageWrap.appendChild(bigImage)
+    
     workSection.addEventListener('click', (e) => {
         e.preventDefault()
         let target = e.target
