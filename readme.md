@@ -6,4 +6,4 @@
 
 ## Технологии: Javascript, HTML5, CSS3, Gulp, Webpack, Babel
 
-### https://ustimenkodenis.github.io/Irvas-windows/src/
+### https://ustimenkodenis.github.io/Irvas-windows/dist/
